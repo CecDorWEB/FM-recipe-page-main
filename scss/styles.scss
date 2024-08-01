@@ -1,0 +1,127 @@
+$color_background_page: hsl(30, 54%, 90%);
+$color_background_recipe: hsl(0, 0%, 100%);
+$color_background_information_section_time: hsl(330, 100%, 98%);
+
+$color_title_recipe: hsl(24, 5%, 18%);
+$color_title_section: hsl(14, 45%, 36%);
+$color_title_information_section_time: hsl(332, 51%, 32%);
+
+$color_paragraphe: hsl(30, 10%, 34%);
+
+$font_title_recipe: "Young Serif";
+$font_title_weigth: 500;
+$font_paragraphe: "Outfit";
+
+$radius: 0.5em;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: $color_background_page;
+  color: $color_paragraphe;
+  font-family: $font_paragraphe;
+}
+
+main {
+  article {
+    display: flex;
+    flex-direction: column;
+    max-width: clamp(375px, 85vw, 734px);
+    background-color: $color_background_recipe;
+    img {
+      max-width: auto;
+      object-fit: contain;
+    }
+    hr {
+      margin-top: 2em;
+      color: $color_paragraphe;
+      opacity: 50%;
+    }
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8em;
+      padding: 2em;
+      ul,
+      ol {
+        margin-left: 1.3em;
+      }
+      li {
+        list-style-position: outside;
+        padding-top: 0.8em;
+        color: $color_title_section;
+        font-weight: 600;
+        p {
+          padding-left: 1em;
+          color: $color_paragraphe;
+          font-weight: 400;
+        }
+      }
+      h1,
+      h2 {
+        font-family: $font_title_recipe;
+        font-weight: $font_title_weigth;
+      }
+      h1 {
+        font-size: 2.3em;
+        line-height: 1;
+        color: $color_title_recipe;
+      }
+      h2 {
+        font-family: $font_title_recipe;
+        color: $color_title_section;
+      }
+      .recipe_presentation_time {
+        background-color: $color_background_information_section_time;
+        border-radius: $radius;
+        padding: 1.5em;
+        h3 {
+          color: $color_title_information_section_time;
+        }
+      }
+    }
+    .recipe_nutrition {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      table {
+        border-collapse: collapse;
+        tr {
+          border-bottom: 1px solid hsla(32, 10%, 34%, 0.3);
+        }
+        tr:last-child {
+          border: none;
+        }
+        td {
+          padding: 0.8em;
+        }
+        td:first-child {
+          text-indent: 2em;
+        }
+        td:last-child {
+          color: $color_title_section;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    margin: 6em;
+    article {
+      border-radius: $radius;
+      img {
+        margin: 2em;
+        border-radius: $radius;
+      }
+    }
+  }
+}

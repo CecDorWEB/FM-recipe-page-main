@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(30, 54%, 90%);
+  color: hsl(30, 10%, 34%);
+  font-family: "Outfit";
+}
+
+main article {
+  display: flex;
+  flex-direction: column;
+  max-width: clamp(375px, 85vw, 734px);
+  background-color: hsl(0, 0%, 100%);
+}
+main article img {
+  max-width: auto;
+  object-fit: contain;
+}
+main article hr {
+  margin-top: 2em;
+  color: hsl(30, 10%, 34%);
+  opacity: 50%;
+}
+main article .recipe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8em;
+  padding: 2em;
+}
+main article .recipe ul,
+main article .recipe ol {
+  margin-left: 1.3em;
+}
+main article .recipe li {
+  list-style-position: outside;
+  padding-top: 0.8em;
+  color: hsl(14, 45%, 36%);
+  font-weight: 600;
+}
+main article .recipe li p {
+  padding-left: 1em;
+  color: hsl(30, 10%, 34%);
+  font-weight: 400;
+}
+main article .recipe h1,
+main article .recipe h2 {
+  font-family: "Young Serif";
+  font-weight: 500;
+}
+main article .recipe h1 {
+  font-size: 2.3em;
+  line-height: 1;
+  color: hsl(24, 5%, 18%);
+}
+main article .recipe h2 {
+  font-family: "Young Serif";
+  color: hsl(14, 45%, 36%);
+}
+main article .recipe .recipe_presentation_time {
+  background-color: hsl(330, 100%, 98%);
+  border-radius: 0.5em;
+  padding: 1.5em;
+}
+main article .recipe .recipe_presentation_time h3 {
+  color: hsl(332, 51%, 32%);
+}
+main article .recipe_nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main article .recipe_nutrition table {
+  border-collapse: collapse;
+}
+main article .recipe_nutrition table tr {
+  border-bottom: 1px solid hsla(32, 10%, 34%, 0.3);
+}
+main article .recipe_nutrition table tr:last-child {
+  border: none;
+}
+main article .recipe_nutrition table td {
+  padding: 0.8em;
+}
+main article .recipe_nutrition table td:first-child {
+  text-indent: 2em;
+}
+main article .recipe_nutrition table td:last-child {
+  color: hsl(14, 45%, 36%);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    margin: 6em;
+  }
+  main article {
+    border-radius: 0.5em;
+  }
+  main article img {
+    margin: 2em;
+    border-radius: 0.5em;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
